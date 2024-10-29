@@ -3,7 +3,7 @@ import Index from "../../components/Index/Index";
 
 const Products = () => {
   return (
-    <div>
+    <div className="index-width">
       <Index />
     </div>
   );

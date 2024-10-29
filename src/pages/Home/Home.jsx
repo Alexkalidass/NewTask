@@ -3,7 +3,7 @@ import "./Home.css";
 import Fiftyproducts from "../../components/FiftyProducts/Fiftyproducts";
 const Home = () => {
   return (
-    <div>
+    <div className="adjus-width">
       <Fiftyproducts />
     </div>
   );

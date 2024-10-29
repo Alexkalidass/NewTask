@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dailysell.css";
-import { best_sell } from "../../assets/assets";
+import { Progress } from "antd";
+import { assets, best_sell } from "../../assets/assets";
 
 const Dailysell = () => {
   const navigate = useNavigate();
@@ -12,13 +13,30 @@ const Dailysell = () => {
 
   return (
     <div className="dailysell-container">
-      <h3>Daily Best Sells</h3>
       <div className="dailysell-items">
         {best_sell.map((item) => (
           <div className="dailysell-item" key={item._id}>
+            <div className="save-box">Save {item.save}%</div>{" "}
             <img src={item.image} alt={item.name} className="dailysell-image" />
             <p>{item.name}</p>
-            {item.offer && <p className="offer">Offer: {item.offer}% off</p>}
+            <div className="rating-container">
+              <img
+                src={assets.rating_starts}
+                alt="Rating Stars"
+                className="rating-stars"
+              />
+              <span className="rating-number">[4]</span>
+            </div>
+            <div className="price-container">
+              <span className="item-price">${item.price}</span>
+              <span className="item-original-price">
+                ${item.original_price}
+              </span>
+            </div>
+            <Progress percent={item.progress} strokeColor="#FF5C00" />
+            <p>
+              Sold: {item.sold}/{item.total}
+            </p>
             <button onClick={handleClaimItem}>Claim Item</button>
           </div>
         ))}

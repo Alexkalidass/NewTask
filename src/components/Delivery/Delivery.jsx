@@ -2,6 +2,7 @@ import React from "react";
 import "./Delivery.css";
 import { assets } from "../../assets/assets";
 import { useNavigate } from "react-router-dom";
+import { ArrowRightOutlined } from "@ant-design/icons";
 
 const Delivery = () => {
   const navigate = useNavigate();
@@ -17,9 +18,13 @@ const Delivery = () => {
           />
           <div className="content-overlay">
             <h2>FREE DELIVERY FOR $50</h2>
-            <p>Enjoy fast and free delivery when you shop over $50.</p>
-            <button onClick={() => navigate("/")}>Shop Now</button>{" "}
-            {/* Navigate to home */}
+            <p>
+              Enjoy fast and free delivery
+              <br /> when you shop over $50.
+            </p>
+            <button onClick={() => navigate("/")}>
+              Shop Now <ArrowRightOutlined />
+            </button>
           </div>
         </div>
 
@@ -33,10 +38,12 @@ const Delivery = () => {
           <div className="content-overlay">
             <h2>Organic Food</h2>
             <p>
-              Discover fresh and organic ingredients delivered to your door.
+              Discover fresh and organic ingredients <br /> delivered to your
+              door.
             </p>
-            <button onClick={() => navigate("/")}>Order Now</button>{" "}
-            {/* Navigate to home */}
+            <button onClick={() => navigate("/")}>
+              Order Now <ArrowRightOutlined />
+            </button>
           </div>
         </div>
       </div>

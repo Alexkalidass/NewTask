@@ -1,0 +1,60 @@
+.dailynav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.dailynav-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.first-color {
+  color: #fff;
+}
+.dailynav-content h1 {
+  margin-right: 30px;
+  color: #fff;
+}
+.add-color {
+  color: #ff5c00;
+}
+.dailynav-content button {
+  background-color: #ff5c00;
+  color: white;
+  border: none;
+  padding: 0px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: none;
+}
+
+.dailynav-content button:hover {
+  background-color: #ff5c00;
+}
+
+.dailynav-content .time-picker {
+  background-color: #ff5c00;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.dailynav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dailynav-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.dailynav-content button:focus {
+  outline: none;
+}
